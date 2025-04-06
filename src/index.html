@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <script src="../node_modules/sortablejs/Sortable.min.js"></script>
+</head>
+<body>
+    <div class="bg-green-50"></div>
+    <div class="bg-blue-600 text-center text-white py-3"> If you have got tasks, start managing today!</div>
+    <div class=" w-[360px] mx-auto my-10">
+            <h1 class="text-2xl font-bold">Manage your task <span class="text-neutral-500"> @ANKESH</span></h1>
+        <p> Add your tasks and start organizing them quickly</p>
+    </div>
+    <div class="w-[360px] mx-auto mt-5 hidden  " id="addinput">
+       <div class="flex gap-2">
+        <input id="task"class="w-[87%] border border-neutral-500 rounded-xl p-3 focus:outline-none focus:ring-4 focus:ring-blue-100 focus:border-blue-500" type="text" placeholder="e.g. Learn Javascript">
+        <input  id="date"class=" w-[13%] border border-neutral-500 rounded-xl p-3  focus:outline-none focus:ring-4 focus:ring-blue-100 focus:border-blue-500" type="date" placeholder="e.g. Learn Javascript">
+       </div>
+
+        <button id="final"class="bg-black text-white px-5 py-3 text-sm font-light mt-1 rounded-xl"> Add Task</button>
+    </div>
+    <div class="w-[360px] mx-auto mt-2" id="todoscontainer">
+        <!-- <div class="border hover:shadow-md cursor-pointer border-neutral-400 bg-violet-50 rounded-xl p-3">
+          <div class="flex justify-between items-center">
+                <h1 class="font-semibold text-[20px]">Learn tailwing media queries</h1>
+          </div>
+            <p class=" text-sm text-[12px]">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+           <div class="flex items-center gap-3">
+            <button class="hover:text-green-500 flex items-center gap-2 text-sm mt-2.5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
+                <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
+                <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+              </svg>Mark as done</button>
+            <button class="hover:text-red-500 flex items-center gap-2 text-sm mt-2.5"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"/>
+              </svg>Delete
+            </button>
+           </div>
+            
+
+        </div> -->
+    </div>
+    <button  id="addbutton"class="fixed bottom-10 right-10 bg-black text-white w-12 flex rounded-full items-center justify-center h-12"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+      </svg></button>
+
+      <script src="./app.js"></script>
+
+      
+    
+    
+</body>
+</html>
